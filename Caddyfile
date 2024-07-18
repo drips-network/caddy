@@ -8,9 +8,5 @@ caddy-mainnet.up.railway.app {
 }
 
 www.caddy-mainnet.up.railway.app {
-	reverse_proxy app.railway.internal {
-			transport http {
-					tls
-			}
-	}
+	reverse_proxy app.railway.internal
 }
