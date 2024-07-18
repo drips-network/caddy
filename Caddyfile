@@ -18,5 +18,5 @@ http://caddy-mainnet-test.up.railway.app:{$PORT} {
 }
 
 http://www-caddy-mainnet-test.up.railway.app:{$PORT} {
-	reverse_proxy http://web-server.railway.internal:8080
+	reverse_proxy http://app.railway.internal:8080
 }
