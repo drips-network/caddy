@@ -1,7 +1,7 @@
-drips.network {
+caddy-mainnet.up.railway.app {
   redir https://www.drips.network{uri} permanent 
 }
 
-www.drips.network {
+www.caddy-mainnet.up.railway.app {
   reverse_proxy app.railway.internal
 }
