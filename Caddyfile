@@ -1,5 +1,5 @@
 {
-	:{$PORT}
+	http_port {$PORT}
 }
 
 caddy-mainnet.up.railway.app {
