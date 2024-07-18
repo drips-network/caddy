@@ -1,0 +1,7 @@
+drips.network {
+  redir https://www.drips.network{uri} permanent 
+}
+
+www.drips.network {
+  reverse_proxy app.railway.internal
+}
