@@ -1,4 +1,6 @@
-:{$PORT}
+{
+	:{$PORT}
+}
 
 caddy-mainnet.up.railway.app {
 	redir https://caddy-mainnet.up.railway.app{uri} permanent 
