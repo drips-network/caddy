@@ -1,5 +1,5 @@
 caddy-mainnet.up.railway.app {
-  redir https://www.drips.network{uri} permanent 
+  redir https://caddy-mainnet.up.railway.app{uri} permanent 
 }
 
 www.caddy-mainnet.up.railway.app {
