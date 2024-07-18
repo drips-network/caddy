@@ -1,11 +1,13 @@
-caddy-mainnet.up.railway.app {
-  redir https://caddy-mainnet.up.railway.app{uri} permanent 
-}
+{$PORT} {
+	caddy-mainnet.up.railway.app {
+		redir https://caddy-mainnet.up.railway.app{uri} permanent 
+	}
 
-www.caddy-mainnet.up.railway.app {
-  reverse_proxy app.railway.internal {
-			transport http {
-					tls
-			}
+	www.caddy-mainnet.up.railway.app {
+		reverse_proxy app.railway.internal {
+				transport http {
+						tls
+				}
+		}
 	}
 }
