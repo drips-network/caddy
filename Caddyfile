@@ -13,10 +13,10 @@
 	}
 }
 
-http://caddy-mainnet-test.up.railway.app:{$PORT} {
-	redir https://www-caddy-mainnet-test.up.railway.app{uri} permanent
+caddy-mainnet.up.railway.app:{$PORT} {
+	redir https://www-caddy-mainnet.up.railway.app{uri} permanent
 }
 
-http://www-caddy-mainnet-test.up.railway.app:{$PORT} {
+www-caddy-mainnet.up.railway.app:{$PORT} {
 	reverse_proxy http://app.railway.internal:8080
 }
