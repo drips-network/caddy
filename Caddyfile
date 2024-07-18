@@ -1,12 +1,22 @@
+# global options
 {
-	http_port {$PORT}
-	auto_https off
+	admin off # theres no need for the admin api in railway's environment
+	persist_config off # storage isn't persistent anyway
+	auto_https off # railway handles https for us, this could in some cases cause issues if left enabled
+	# runtime logs
+	log {
+		format json # set runtime log format to json mode 
+	}
+	# server options
+	servers {
+		trusted_proxies static private_ranges # trust railway's proxy
+	}
 }
 
-caddy-mainnet.up.railway.app {
-	redir https://caddy-mainnet.up.railway.app{uri} permanent 
+http://caddy-mainnet-test.up.railway.app:{$PORT} {
+	redir https://www-caddy-mainnet-test.up.railway.app{uri} permanent
 }
 
-www.caddy-mainnet.up.railway.app {
-	reverse_proxy app.railway.internal
+http://www-caddy-mainnet-test.up.railway.app:{$PORT} {
+	reverse_proxy http://web-server.railway.internal:8080
 }
