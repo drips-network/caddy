@@ -1,5 +1,6 @@
 {
 	http_port {$PORT}
+	auto_https off
 }
 
 caddy-mainnet.up.railway.app {
